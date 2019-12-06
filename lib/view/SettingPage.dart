@@ -33,6 +33,7 @@ class _SettingPageState extends State<SettingPage> {
     version: 'Unknown',
     buildNumber: 'Unknown',
   );
+
   @override
   void dispose() {
     _controller.removeListener(addressListener);

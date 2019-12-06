@@ -93,7 +93,7 @@ class _EntityControlSensorState extends State<EntityControlSensor> {
       if (response.statusCode == 200) {
 //        log.w("response.statusCode ${response.statusCode}");
         var jsonResponse = jsonDecode(response.body);
-        log.d("jsonResponse $jsonResponse");
+        log.d("getHistory jsonResponse $jsonResponse");
         gd.sensors = [];
         for (var rec in jsonResponse[0]) {
           if (continueBreak > 5) {

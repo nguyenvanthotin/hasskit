@@ -126,7 +126,7 @@ class _HomeViewState extends State<HomeView> with WidgetsBindingObserver {
 
   @override
   void initState() {
-    super.initState();   
+    super.initState();
 
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     WidgetsBinding.instance.addObserver(this);
@@ -180,7 +180,10 @@ class _HomeViewState extends State<HomeView> with WidgetsBindingObserver {
     }
   }
 
-  timer5Callback() {}
+  timer5Callback() {
+    //in case websocket fail for no reason.
+//    gd.httpApiStates();
+  }
 
   timer10Callback() {
     if (gd.connectionStatus != "Connected" && gd.autoConnect) {
@@ -190,9 +193,11 @@ class _HomeViewState extends State<HomeView> with WidgetsBindingObserver {
 
   timer30Callback() {
     if (gd.connectionStatus == "Connected") {
-      var outMsg = {"id": gd.socketId, "type": "get_states"};
-      var outMsgEncoded = json.encode(outMsg);
-      webSocket.send(outMsgEncoded);
+      gd.delayGetStatesTimer(5);
+//      use http
+//      var outMsg = {"id": gd.socketId, "type": "get_states"};
+//      var outMsgEncoded = json.encode(outMsg);
+//      webSocket.send(outMsgEncoded);
     }
   }
 

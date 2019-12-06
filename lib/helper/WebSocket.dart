@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:hasskit/helper/GeneralData.dart';
 import 'package:web_socket_channel/io.dart';
@@ -112,7 +111,7 @@ class WebSocket {
   /// Sends a message to the server
   /// ---------------------------------------------------------
   send(String message) {
-    log.w("send BEFORE $message");
+//    log.w("send BEFORE $message");
 //    log.d("gd.firebaseCurrentUser==null ${gd.firebaseCurrentUser == null}");
     if (_channel != null) {
       if (_channel.sink != null && connected) {
@@ -280,12 +279,17 @@ class WebSocket {
             send(json.encode(outMsg));
           } else if (id == gd.subscribeEventsId) {
             log.e('8. id == gd.subscribeEventsId');
-            outMsg = {"id": gd.socketId, "type": "get_states"};
-            send(json.encode(outMsg));
-          } else if (id == gd.getStatesId) {
-            log.e('9 id == gd.getStatesId');
-            gd.socketGetStates(decode['result']);
-          } else if (id == gd.cameraStreamId) {
+            gd.httpApiStates();
+//            use http
+//            outMsg = {"id": gd.socketId, "type": "get_states"};
+//            send(json.encode(outMsg));
+          }
+//          use http
+//          else if (id == gd.getStatesId) {
+//            log.e('9 id == gd.getStatesId');
+//            gd.socketGetStates(decode['result']);
+//          }
+          else if (id == gd.cameraStreamId) {
             log.e('10 id == gd.cameraStreamId');
             gd.cameraStreamUrl = gd.currentUrl + decode['result']["url"];
             log.e(

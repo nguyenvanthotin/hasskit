@@ -1124,7 +1124,8 @@ class GeneralData with ChangeNotifier {
     _delayGetStates?.cancel();
     _delayGetStates = null;
 
-    _delayGetStates = Timer(Duration(seconds: seconds), delayGetStates);
+//    _delayGetStates = Timer(Duration(seconds: seconds), delayGetStates);
+    _delayGetStates = Timer(Duration(seconds: seconds), httpApiStates);
   }
 
   void delayGetStates() {
@@ -2164,6 +2165,32 @@ class GeneralData with ChangeNotifier {
         false,
         false,
       ];
+    }
+  }
+
+  void httpApiStates() async {
+    var client = new http.Client();
+    var url = gd.currentUrl + "/api/states";
+    Map<String, String> headers = {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer ${gd.loginDataCurrent.longToken}',
+    };
+
+    log.d("httpApiStates $url");
+
+    try {
+      var response = await http.get(url, headers: headers);
+      if (response.statusCode == 200) {
+        log.w("httpApiStates response.statusCode ${response.statusCode}");
+        var jsonResponse = jsonDecode(response.body);
+        log.d("httpApiStates jsonResponse $jsonResponse");
+        socketGetStates(jsonResponse);
+      } else {
+        print(
+            "httpApiStates Request failed with status: ${response.statusCode}.");
+      }
+    } finally {
+      client.close();
     }
   }
 }
