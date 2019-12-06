@@ -105,7 +105,8 @@ class _EntityControlToggleState extends State<EntityControlToggle> {
                               ? ThemeInfo.colorIconActive
                               : ThemeInfo.colorIconInActive),
                       Text(
-                        gd.textToDisplay(gd.entities[widget.entityId].state),
+                        gd.textToDisplay(gd.entities[widget.entityId]
+                            .getStateDisplayTranslated(context)),
                         style: ThemeInfo.textStatusButtonActive,
                         maxLines: 1,
                         textScaleFactor:

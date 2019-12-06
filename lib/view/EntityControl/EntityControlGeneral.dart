@@ -29,7 +29,7 @@ class EntityControlGeneral extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                gd.textToDisplay(entity.state),
+                gd.textToDisplay(entity.getStateDisplayTranslated(context)),
                 style: Theme.of(context).textTheme.title,
               ),
             ],

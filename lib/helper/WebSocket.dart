@@ -111,7 +111,7 @@ class WebSocket {
   /// Sends a message to the server
   /// ---------------------------------------------------------
   send(String message) {
-//    log.w("send BEFORE $message");
+    log.w("send BEFORE $message");
 //    log.d("gd.firebaseCurrentUser==null ${gd.firebaseCurrentUser == null}");
     if (_channel != null) {
       if (_channel.sink != null && connected) {

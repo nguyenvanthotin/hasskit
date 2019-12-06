@@ -153,6 +153,7 @@ class _HomeAssistantLoginWebViewState extends State<HomeAssistantLoginWebView> {
               children: <Widget>[
                 Text(
                   Translate.getString("login.correct_info", context),
+//                  "Make sure the following info are correct",
                   textAlign: TextAlign.center,
                 ),
                 Text(
@@ -174,15 +175,17 @@ class _HomeAssistantLoginWebViewState extends State<HomeAssistantLoginWebView> {
                         widget.closePage();
 //                        Navigator.pop(context);
                       },
-                      child:
-                          Text(Translate.getString("global.cancel", context)),
+//                      child:
+//                          Text(Translate.getString("global.cancel", context)),
+                      child: Text("Cancel"),
                     ),
                     SizedBox(width: 8),
                     RaisedButton(
                       onPressed: () {
                         Navigator.of(context).pushNamed('/widget');
                       },
-                      child: Text(Translate.getString("global.ok", context)),
+//                      child: Text(Translate.getString("global.ok", context)),
+                      child: Text("OK"),
                     ),
                   ],
                 ),

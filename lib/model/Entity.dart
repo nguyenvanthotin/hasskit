@@ -38,10 +38,8 @@ class Entity {
 //Fan
   List<String> speedList;
   bool oscillating;
-  String speedLevel;
   String speed;
   int angle;
-  int directSpeed;
   //Light
   int supportedFeatures;
   int brightness;
@@ -91,10 +89,8 @@ class Entity {
     //fan
     this.speedList,
     this.oscillating,
-    this.speedLevel,
     this.speed,
     this.angle,
-    this.directSpeed,
     //light
     this.supportedFeatures,
     this.brightness,
@@ -191,19 +187,16 @@ class Entity {
         oscillating: json['attributes']['oscillating'] != null
             ? json['attributes']['oscillating']
             : false,
-        speedLevel: json['attributes']['speed_level'].toString() != null
-            ? json['attributes']['speed_level'].toString()
-            : "0",
-        speed: json['attributes']['speed'].toString() != null
-            ? json['attributes']['speed'].toString()
-            : "0",
+        speed: json['attributes']['direct_speed'].toString() != null
+            ? json['attributes']['direct_speed'].toString()
+            : json['attributes']['speed_level'].toString() != null
+                ? json['attributes']['speed_level'].toString()
+                : json['attributes']['speed'].toString() != null
+                    ? json['attributes']['speed'].toString()
+                    : "0",
         angle: int.tryParse(json['attributes']['angle'].toString()) != null
             ? int.tryParse(json['attributes']['angle'].toString())
             : 0,
-        directSpeed:
-            int.tryParse(json['attributes']['direct_speed'].toString()) != null
-                ? int.tryParse(json['attributes']['direct_speed'].toString())
-                : 0,
         //supported_features
         supportedFeatures: int.tryParse(
                     json['attributes']['supported_features'].toString()) !=
@@ -634,31 +627,13 @@ class Entity {
 
   String get getStateDisplay {
     if (isStateOn && entityId.contains("fan.")) {
-      if (speedLevel != null && speedLevel.length > 0 && speedLevel != "null")
-        return speedLevel;
       if (speed != null && speed.length > 0 && speed != "null") return speed;
     }
-
     return state;
   }
 
   String getStateDisplayTranslated(BuildContext context) {
     if (isStateOn && entityId.contains("fan.")) {
-      if (speedLevel != null && speedLevel.length > 0 && speedLevel != "null") {
-        if (speedLevel.toLowerCase() == "high")
-          return Translate.getString("states.fan_high", context);
-        if (speedLevel.toLowerCase() == "mediumhigh")
-          return Translate.getString("states.fan_high_medium", context);
-        if (speedLevel.toLowerCase() == "medium")
-          return Translate.getString("states.fan_medium", context);
-        if (speedLevel.toLowerCase() == "mediumlow")
-          return Translate.getString("states.fan_medium_low", context);
-        if (speedLevel.toLowerCase() == "low")
-          return Translate.getString("states.fan_low", context);
-        if (speedLevel.toLowerCase() == "lowest")
-          return Translate.getString("states.fan_lowest", context);
-        return speedLevel;
-      }
       if (speed != null && speed.length > 0 && speed != "null") {
         if (speed.toLowerCase() == "high")
           return Translate.getString("states.fan_high", context);
@@ -676,18 +651,30 @@ class Entity {
       }
     }
 
-    if (state.toLowerCase() == "off")
-      return Translate.getString("states.off", context);
     if (state.toLowerCase() == "on")
       return Translate.getString("states.on", context);
+    if (state.toLowerCase() == "turning on...")
+      return Translate.getString("states.turning_on", context);
+    if (state.toLowerCase() == "off")
+      return Translate.getString("states.off", context);
+    if (state.toLowerCase() == "turning off...")
+      return Translate.getString("states.turning_off", context);
     if (state.toLowerCase() == "closed")
       return Translate.getString("states.closed", context);
+    if (state.toLowerCase() == "closing...")
+      return Translate.getString("states.closing", context);
     if (state.toLowerCase() == "open")
       return Translate.getString("states.open", context);
+    if (state.toLowerCase() == "opening...")
+      return Translate.getString("states.opening", context);
     if (state.toLowerCase() == "locked")
       return Translate.getString("states.locked", context);
+    if (state.toLowerCase() == "locking...")
+      return Translate.getString("states.locking", context);
     if (state.toLowerCase() == "unlocked")
       return Translate.getString("states.unlocked", context);
+    if (state.toLowerCase() == "unlocking...")
+      return Translate.getString("states.unlocking", context);
     if (state.toLowerCase() == "disarmed")
       return Translate.getString("states.disarmed", context);
     if (state.toLowerCase().contains("armed")) {

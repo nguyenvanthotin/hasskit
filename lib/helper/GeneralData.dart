@@ -225,7 +225,7 @@ class GeneralData with ChangeNotifier {
         continue;
       }
 
-//      if (entity.entityId.contains("camera.")) {
+//      if (entity.entityId.contains("fan.")) {
 //        log.w("\n socketGetStates ${entity.entityId} mess $mess");
 //      }
 
@@ -243,7 +243,7 @@ class GeneralData with ChangeNotifier {
       }
     }
 
-    log.d('socketGetStates total entities ${_entities.length}');
+//    log.d('socketGetStates total entities ${_entities.length}');
     notifyListeners();
   }
 
@@ -260,12 +260,15 @@ class GeneralData with ChangeNotifier {
       return;
     }
 
-//    log.w(
-//        "socketSubscribeEvents new_state ${message['event']['data']['new_state'].toString()}");
-
     eventEntityUpdate(entityId);
     _entities[entityId] =
         Entity.fromJson(message['event']['data']['new_state']);
+
+//    if (_entities[entityId].entityId.contains("fan.")) {
+//      log.w(
+//          "\n socketSubscribeEvents $entityId message $message['event']['data']['new_state']");
+//    }
+
     notifyListeners();
   }
 
