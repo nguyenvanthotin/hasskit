@@ -43,7 +43,9 @@ class MyApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
+
     gd.localeData = EasyLocalizationProvider.of(context).data;
+
     return EasyLocalizationProvider(
       data: gd.localeData,
       child: Selector<GeneralData, ThemeData>(
@@ -57,7 +59,11 @@ class MyApp extends StatelessWidget {
                   locale: gd.localeData.locale, path: 'assets/langs')
             ],
             locale: gd.localeData.savedLocale,
-            supportedLocales: [Locale('en', 'US'), Locale('sv', 'SE')],
+            supportedLocales: [
+              Locale('en', 'US'),
+              Locale('sv', 'SE'),
+              Locale('vi', 'VN'),
+            ],
             debugShowCheckedModeBanner: false,
             theme: currentTheme,
             title: 'HassKit',

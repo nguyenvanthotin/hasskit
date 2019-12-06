@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'dart:core';
 import 'dart:math';
 import 'dart:ui';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flushbar/flushbar.dart';
@@ -2143,7 +2142,10 @@ class GeneralData with ChangeNotifier {
   List<String> countryCode = ["US", "SE", "VN"];
 
   void setLocale() {
-    log.d("setLocale ${gd.localeData.toString()} ");
+    log.w("setLocale ${gd.localeData.toString()} ");
+    log.w(
+        "setLocale countryCode ${gd.localeData.data.locale.countryCode} languageCode ${gd.localeData.data.locale.languageCode} scriptCode ${gd.localeData.data.locale.scriptCode}");
+
     if (gd.currentLocale == "sv_SE") {
       gd.localeData.changeLocale(Locale("sv", "SE"));
       selectedLanguageIndex = [

@@ -657,7 +657,7 @@ class _LanguageSelector extends StatelessWidget {
               isSelected: gd.selectedLanguageIndex,
               constraints: BoxConstraints.tight(Size(42, 32)),
               borderColor: Colors.transparent,
-              selectedBorderColor: ThemeInfo.colorBottomSheetReverse,
+              selectedBorderColor: Colors.transparent,
               children: <Widget>[
                 Image.asset(
                   "assets/flags/gb.png",
