@@ -66,7 +66,7 @@
     "login": {
         "connecting": "Σύνδεση με",
         "correct_info": "Βεβαιωθείτε ότι οι ακόλουθες πληροφορίες είναι σωστές",
-        "cancel": "Ακύρωσης σύνδεσης"
+        "cancel": "Ακύρωση σύνδεσης"
     },
     "settings": {
         "home_assistant": "Σύνδεση με το Home Assistant",
@@ -115,11 +115,11 @@
         "armed_home": "Οπλισμένο σε home",
         "armed_night": "Οπλισμένο σε night",
         "armed": "Οπλισμένο",
-        "fan_high": "High",
-        "fan_high_medium": "Medium High",
-        "fan_medium": "Medium",
-        "fan_medium_low": "Medium Low",
-        "fan_low": "Low",
-        "fan_lowest": "Lowest"
+        "fan_high": "Υψηλή",
+        "fan_high_medium": "Μεσαία Υψηλή",
+        "fan_medium": "Μεσαία",
+        "fan_medium_low": "Μεσαία Χαμηλή",
+        "fan_low": "Χαμηλή",
+        "fan_lowest": "Χαμηλότερη"
     }
 }
