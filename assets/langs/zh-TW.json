@@ -1,0 +1,119 @@
+{
+    "global": {
+        "duration": "持續時間",
+        "open": "開啟",
+        "closed": "關閉",
+        "on": "開",
+        "off": "關",
+        "error": "錯誤",
+        "no_data": "沒有資料",
+        "reset": "重置",
+        "ok": "Ok",
+        "left": "左",
+        "right": "右",
+        "connect_hass": "請連線至\nHome Assistant",
+        "last_update": "最後更新",
+        "cancel": "取消",
+        "settings": "設定",
+        "rooms": "房間",
+        "disconnect": "斷線",
+        "refresh": "更新",
+        "last_access": "最後存取",
+        "connected": "已連線",
+        "disconnected": "已斷線"
+    },
+    "edit": {
+        "select_icon": "選擇自訂圖示",
+        "reset_icon": "重置圖示",
+        "rbg_color": "常按以編輯色彩",
+        "edit": "編輯",
+        "arrange": "配置",
+        "move": "移動",
+        "delete": "刪除",
+        "devices": "設備",
+        "add_room": "新增房間"
+    },
+    "alarm_panel": {
+        "arm_home":"在家警戒",
+        "arm_away": "離家警戒",
+        "disarmed": "解除警戒",
+        "pending": "懸置中",
+        "armed_away": "離家警戒",
+        "armed_home": "在家警戒",
+        "armed_night": "夜晚警戒",
+        "armed": "已警戒"
+    },
+    "toggle": {
+        "require_slide_open_disabled": "需滑動以開啟「已關閉」",
+        "require_slide_open_enabled": "需滑動以開啟「已開啟」",
+        "prevent_accidentally_open": "避免誤觸",
+        "1_touch": "可單次觸碰開啟"
+    },
+    "rgb": {
+        "pick_color": "選擇顏色！"
+    },
+    "webview": {
+        "edit": "編輯網站",
+        "saved": "網站已儲存",
+        "reload": "重新載入網站",
+        "pin": "鎖定網站 - 避免網站捲動",
+        "unpin": "解鎖網站 - 允許網站捲動",
+        "windy": "風大",
+        "y_weather": "Y! 天氣",
+        "live_score": "LiveScore",
+        "aspect": "比例"
+    },
+    "login": {
+        "connecting": "連線至",
+        "correct_info": "請確定連線資訊正確",
+        "cancel": "取消網頁登入連線"
+    },
+    "settings": {
+        "home_assistant": "Home Assistant 連線",
+        "new_connection": "新增連線...",
+        "use_https": "使用 https",
+        "connect": "連線",
+        "sync": "Google Cloud 同步",
+        "theme_color": "主題顏色",
+        "language": "語言",
+        "layout": "Layout",
+        "about": "關於 HassKit",
+        "about_info": "HassKit 為一款觸控操作 - 無需設定的 App、以方便立即上手 Home Assistant（Hass）。\n\nHass 為目前市場上最佳家庭自動化的平台之一、具有極強大的功能與來自全球的支援設備。Hass 僅需一些簡單/價格合理的硬體即能組建完成。\n\n然而、Hass 並不容易設定、需要幾個月的時間方能上手熟練。HassKit 主要目的即是藉由簡易的十秒設定，即能開始使用 Hass 家庭自動化平台、大量簡化學習曲線、進而改善 Hass 使用者的生活。\n\nHassKit 是一款免費、開源且開發中的專案，我們需要您的協助以改進 App 功能進而協助使用者。\n\n請透過 Discord 及 Facebook 與我們聯繫、任何投入都相當歡迎！",
+        "3_buttons": "大按鈕模式",
+        "4_buttons": "小按鈕模式"
+    },
+    "google_sync": {
+        "use": "使用雲端資料同步",
+        "info": "保持不同裝置之間、房間配置與設備自訂化同步。HassKit 不會上傳任何您的登入資料...",
+        "sign_out": "登出",
+        "sign_in": "登入",
+        "force_download": "強制自雲端下載資料",
+        "sync_problem": "僅用於同步出現問題時",
+        "force_upload": "強制上傳資料至雲端",
+        "force_reset": "強制重置雲端資料"
+    },
+    "theme_selector": {
+        "dark": "深色模式",
+        "light": "淺色模式"
+    },
+    "states": {
+        "off": "開啟",
+        "on": "關閉",
+        "closed": "已關閉",
+        "open": "已開啟",
+        "locked": "已上鎖",
+        "unlocked": "已解鎖",
+        "disarmed": "已解除警戒",
+        "arm_pending": "懸置中",
+        "armed_away": "離家警戒",
+        "armed_home": "在家警戒",
+        "armed_night": "夜間警戒",
+        "armed": "已警戒",
+        "fan_high": "高",
+        "fan_high_medium": "偏高",
+        "fan_medium": "中高",
+        "fan_medium_low": "偏低",
+        "fan_low": "低",
+        "fan_lowest": "最低"
+    }
+}
