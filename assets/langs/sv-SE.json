@@ -78,13 +78,13 @@
         "language": "Språk",
         "layout": "Layout",
         "about": "Om HassKit",
-        "about_info": "Home AssistantKit är en touch-vänlig - noll konfigurerings app för att hjälpa till att få det lätt att komma igång med Home Assistant.\n\nHome Assistant är en av de bästa plattformarna för hem automatition, med kraftfulla funktioner och stödjer väldigt många enheter. Home Assistant kräver väldigt lite av hårdvaran och han köras på billig hårdvara. Dock så är Home Assistant inte lätt att komma igång med då det kräver mycket konfigurering och även lite script kunskaper. Home AssistantKits mål är att ta bort denna tröskel och göra Home Assistant tillgängligt för alla.\n\nHome AssistantKit är gratis och open source. Det är under utveckling. Vi behöver hjälp med att göra appen ännu bättre med mer funktioner!\n\nNi kan hitta oss på Discord eller Facebook. Dina bidrag är alltid välkomna.",
+        "about_info": "HassKit är en touch-vänlig - noll konfigurerings app för att hjälpa till att få det lätt att komma igång med Home Assistant.\n\nHome Assistant är en av de bästa plattformarna för hem automatition, med kraftfulla funktioner och stödjer väldigt många enheter. Home Assistant kräver väldigt lite av hårdvaran och han köras på billig hårdvara. Dock så är Home Assistant inte lätt att komma igång med då det kräver mycket konfigurering och även lite script kunskaper. HassKits mål är att ta bort denna tröskel och göra Home Assistant tillgängligt för alla.\n\nHassKit är gratis och open source. Det är under utveckling. Vi behöver hjälp med att göra appen ännu bättre med mer funktioner!\n\nNi kan hitta oss på Discord eller Facebook. Dina bidrag är alltid välkomna.",
         "3_buttons": "3 Knappar",
         "4_buttons": "4 Knappar"
     },
     "google_sync": {
         "use": "Använd google måln sync",
-        "info": "Håller din rum, layout och enhets konfiguration synkroniserad över enheter. Home AssistantKit laddar inte upp din login data.",
+        "info": "Håller din rum, layout och enhets konfiguration synkroniserad över enheter. HassKit laddar inte upp din login data.",
         "sign_out": "Logga ut",
         "sign_in": "Logga in",
         "force_download": "Tvinga ner data från målnet",

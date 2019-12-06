@@ -78,13 +78,13 @@
         "language": "Ngôn ngữ",
         "layout": "Bố trí",
         "about": "Thông tin về HassKit",
-        "about_info": "Home AssistantKit là một ứng dụng mạnh mẽ và thân thiện giúp người dùng ngay lập tức sử dụng Home Assistant mà không cần qua các thao tác cài đặt phức tạp.\n\nHome Assistant là một trong những nền tảng tốt nhất cho nhà thông minh, với các tính năng mạnh mẽ và quy mô hỗ trợ thiết bị nhiều nhất thế giới. Home Assistant chỉ yêu cầu một số phần cứng đơn giản / không đắt tiền để bắt đầu điều khiển nhà thông minh.\n\nTuy nhiên, Home Assistant không dễ thiết lập và cần một thời gian để tinh chỉnh các tính năng theo ý thích. Home AssistantKit sinh ra với mục đích đơn giản hóa các yêu cầu cấu hình  phức tạp của Home Assistant bằng cách cung cấp giao diện tuyệt đẹp và thiết lập 10 giây để có thể bắt đầu sử dụng nền tảng nhà thông minh tuyệt vời này.\n\nHome AssistantKit miễn phí, mã nguồn mở và đang được phát triển. Chúng tôi mong nhận được sự giúp đỡ của bạn để cải thiện các tính năng của ứng dụng qua đó phục vụ bạn tốt hơn.\n\nHãy tham gia cùng chúng tôi trên Discord và Facebook. Xin cảm ơn đóng góp dưới mọi hình thức của bạn.",
+        "about_info": "HassKit là một ứng dụng mạnh mẽ và thân thiện giúp người dùng ngay lập tức sử dụng Home Assistant mà không cần qua các thao tác cài đặt phức tạp.\n\nHome Assistant là một trong những nền tảng tốt nhất cho nhà thông minh, với các tính năng mạnh mẽ và quy mô hỗ trợ thiết bị nhiều nhất thế giới. Home Assistant chỉ yêu cầu một số phần cứng đơn giản / không đắt tiền để bắt đầu điều khiển nhà thông minh.\n\nTuy nhiên, Home Assistant không dễ thiết lập và cần một thời gian để tinh chỉnh các tính năng theo ý thích. HassKit sinh ra với mục đích đơn giản hóa các yêu cầu cấu hình  phức tạp của Home Assistant bằng cách cung cấp giao diện tuyệt đẹp và thiết lập 10 giây để có thể bắt đầu sử dụng nền tảng nhà thông minh tuyệt vời này.\n\nHassKit miễn phí, mã nguồn mở và đang được phát triển. Chúng tôi mong nhận được sự giúp đỡ của bạn để cải thiện các tính năng của ứng dụng qua đó phục vụ bạn tốt hơn.\n\nHãy tham gia cùng chúng tôi trên Discord và Facebook. Xin cảm ơn đóng góp dưới mọi hình thức của bạn.",
         "3_buttons": "3 nút một hàng",
         "4_buttons": "4 nút một hàng"
     },
     "google_sync": {
         "use": "Sử dụng động bộ dữ liệu đám mây",
-        "info": "Đồng bộ hóa thiết lập phòng và tùy chỉnh các thiết bị thông qua điện toán đám mây. Home AssistantKit không tải lên dữ liệu đăng nhập của bạn lên mạng...",
+        "info": "Đồng bộ hóa thiết lập phòng và tùy chỉnh các thiết bị thông qua điện toán đám mây. HassKit không tải lên dữ liệu đăng nhập của bạn lên mạng...",
         "sign_out": "Đăng xuất",
         "sign_in": "Đăng nhập",
         "force_download": "Tải dữ liệu từ đám mây",
