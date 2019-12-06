@@ -208,13 +208,23 @@ class _SettingPageState extends State<SettingPage> {
                                           FocusScope.of(context)
                                               .requestFocus(new FocusNode());
                                         }
+
+                                        _controller.text =
+                                            _controller.text.trim();
+                                        _controller.text =
+                                            _controller.text.toLowerCase();
+                                        _controller.text = _controller.text
+                                            .replaceAll("https://", "");
+                                        _controller.text = _controller.text
+                                            .replaceAll("http://", "");
+                                        if (_controller.text.contains("/"))
+                                          _controller.text =
+                                              _controller.text.split("/")[0];
+
                                         gd.loginDataCurrent = LoginData(
                                             url: gd.useSSL
-                                                ? "https://" +
-                                                    gd.trimUrl(_controller.text)
-                                                : "http://" +
-                                                    gd.trimUrl(
-                                                        _controller.text));
+                                                ? "https://" + _controller.text
+                                                : "http://" + _controller.text);
                                         log.w(
                                             "gd.loginDataCurrent.url ${gd.loginDataCurrent.url}");
                                         //prevent autoConnect hijack gd.loginDataCurrent.url

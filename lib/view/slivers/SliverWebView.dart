@@ -58,7 +58,9 @@ class _WebViewState extends State<WebView> {
   void initState() {
     super.initState();
     currentUrl = gd.baseSetting.getWebViewUrl(widget.webViewsId);
+    if (currentUrl == null) currentUrl = "https://embed.windy.com";
     ratio = gd.baseSetting.getWebViewRatio(widget.webViewsId);
+    if (ratio == null) ratio = 0.7;
     ratioDisplay = ratio;
     textController.text = currentUrl;
   }

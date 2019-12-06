@@ -2183,7 +2183,7 @@ class GeneralData with ChangeNotifier {
       if (response.statusCode == 200) {
         log.w("httpApiStates response.statusCode ${response.statusCode}");
         var jsonResponse = jsonDecode(response.body);
-        log.d("httpApiStates jsonResponse $jsonResponse");
+//        log.d("httpApiStates jsonResponse $jsonResponse");
         socketGetStates(jsonResponse);
       } else {
         print(
