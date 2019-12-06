@@ -62,6 +62,7 @@ class EntityCamera extends StatelessWidget {
                             fit: StackFit.expand,
                             alignment: Alignment.center,
                             children: <Widget>[
+                              Container(color: ThemeInfo.colorBackgroundDark),
                               Image(
                                 image: cameraInfo.previousImage,
                                 fit: BoxFit.cover,

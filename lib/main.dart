@@ -60,9 +60,12 @@ class MyApp extends StatelessWidget {
             ],
             locale: gd.localeData.savedLocale,
             supportedLocales: [
+              Locale('bg', 'BG'),
+              Locale('el', 'GR'),
               Locale('en', 'US'),
               Locale('sv', 'SE'),
               Locale('vi', 'VN'),
+              Locale('zh', 'TW'),
             ],
             debugShowCheckedModeBanner: false,
             theme: currentTheme,

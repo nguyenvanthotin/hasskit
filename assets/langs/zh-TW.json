@@ -78,7 +78,7 @@
         "language": "語言",
         "layout": "Layout",
         "about": "關於 HassKit",
-        "about_info": "HassKit 為一款觸控操作 - 無需設定的 App、以方便立即上手 Home Assistant（Hass）。\n\nHass 為目前市場上最佳家庭自動化的平台之一、具有極強大的功能與來自全球的支援設備。Hass 僅需一些簡單/價格合理的硬體即能組建完成。\n\n然而、Hass 並不容易設定、需要幾個月的時間方能上手熟練。HassKit 主要目的即是藉由簡易的十秒設定，即能開始使用 Hass 家庭自動化平台、大量簡化學習曲線、進而改善 Hass 使用者的生活。\n\nHassKit 是一款免費、開源且開發中的專案，我們需要您的協助以改進 App 功能進而協助使用者。\n\n請透過 Discord 及 Facebook 與我們聯繫、任何投入都相當歡迎！",
+        "about_info": "HassKit 為一款觸控操作 - 無需設定的 App、以方便立即上手 Home Assistant。\n\nHome Assistant 為目前市場上最佳家庭自動化的平台之一、具有極強大的功能與來自全球的支援設備。Home Assistant 僅需一些簡單/價格合理的硬體即能組建完成。\n\n然而、Home Assistant 並不容易設定、需要幾個月的時間方能上手熟練。HassKit 主要目的即是藉由簡易的十秒設定，即能開始使用 Home Assistant 家庭自動化平台、大量簡化學習曲線、進而改善 Home Assistant 使用者的生活。\n\nHassKit 是一款免費、開源且開發中的專案，我們需要您的協助以改進 App 功能進而協助使用者。\n\n請透過 Discord 及 Facebook 與我們聯繫、任何投入都相當歡迎！",
         "3_buttons": "大按鈕模式",
         "4_buttons": "小按鈕模式"
     },

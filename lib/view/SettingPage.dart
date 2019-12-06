@@ -5,6 +5,7 @@ import 'package:hasskit/helper/GoogleSign.dart';
 import 'package:hasskit/helper/Logger.dart';
 import 'package:hasskit/helper/MaterialDesignIcons.dart';
 import 'package:hasskit/helper/ThemeInfo.dart';
+import 'package:hasskit/model/LocalLanguage.dart';
 import 'package:hasskit/model/LoginData.dart';
 import 'package:package_info/package_info.dart';
 import 'package:provider/provider.dart';
@@ -297,7 +298,7 @@ class _SettingPageState extends State<SettingPage> {
                 ),
                 title: Translate.getString("settings.language", context),
               ),
-              _LanguageSelector(),
+              LocalLanguagePicker(),
               SliverHeaderNormal(
                 icon: Icon(
                   MaterialDesignIcons.getIconDataFromIconName(
@@ -637,65 +638,6 @@ class _LayoutSelector extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _LanguageSelector extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SliverList(
-      delegate: SliverChildListDelegate(
-        [
-          Container(
-            alignment: Alignment.center,
-            child: ToggleButtons(
-              isSelected: gd.selectedLanguageIndex,
-              constraints: BoxConstraints.tight(Size(42, 32)),
-              borderColor: Colors.transparent,
-              selectedBorderColor: Colors.transparent,
-              children: <Widget>[
-                Image.asset(
-                  "assets/flags/gb.png",
-                  fit: BoxFit.cover,
-                  width: 40,
-                  height: 30,
-                ),
-                Image.asset(
-                  "assets/flags/se.png",
-                  fit: BoxFit.cover,
-                  width: 40,
-                  height: 30,
-                ),
-                Image.asset(
-                  "assets/flags/vn.png",
-                  fit: BoxFit.cover,
-                  width: 40,
-                  height: 30,
-                ),
-              ],
-              onPressed: (int index) {
-                for (int buttonIndex = 0;
-                    buttonIndex < gd.selectedLanguageIndex.length;
-                    buttonIndex++) {
-                  if (buttonIndex == index) {
-                    log.d(
-                        "buttonIndex $buttonIndex gd.languageCode[buttonIndex] ${gd.languageCode[buttonIndex]} gd.countryCode[buttonIndex] ${gd.countryCode[buttonIndex]}");
-
-                    gd.selectedLanguageIndex[buttonIndex] = true;
-                    gd.localeData.changeLocale(Locale(
-                      gd.languageCode[buttonIndex],
-                      gd.countryCode[buttonIndex],
-                    ));
-                  } else {
-                    gd.selectedLanguageIndex[buttonIndex] = false;
-                  }
-                }
-              },
             ),
           ),
         ],

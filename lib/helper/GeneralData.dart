@@ -2127,51 +2127,7 @@ class GeneralData with ChangeNotifier {
 
   int webViewSupportMax = 3;
 
-  String _currentLocale;
-
-  String get currentLocale => _currentLocale;
-
-  set currentLocale(String val) {
-    if (val != null && val != "" && _currentLocale != val) {
-      _currentLocale = val;
-      setLocale();
-    }
-  }
-
   var localeData;
-
-  List<bool> selectedLanguageIndex = [true, false, false];
-  List<String> languageCode = ["en", "sv", "vi"];
-  List<String> countryCode = ["US", "SE", "VN"];
-
-  void setLocale() {
-    log.w("setLocale ${gd.localeData.toString()} ");
-    log.w(
-        "setLocale countryCode ${gd.localeData.data.locale.countryCode} languageCode ${gd.localeData.data.locale.languageCode} scriptCode ${gd.localeData.data.locale.scriptCode}");
-
-    if (gd.currentLocale == "sv_SE") {
-      gd.localeData.changeLocale(Locale("sv", "SE"));
-      selectedLanguageIndex = [
-        false,
-        true,
-        false,
-      ];
-    } else if (gd.currentLocale == "vi_VN") {
-      gd.localeData.changeLocale(Locale("vi", "VN"));
-      selectedLanguageIndex = [
-        false,
-        false,
-        true,
-      ];
-    } else {
-      gd.localeData.changeLocale(Locale("en", "US"));
-      selectedLanguageIndex = [
-        true,
-        false,
-        false,
-      ];
-    }
-  }
 
   void httpApiStates() async {
     var client = new http.Client();
